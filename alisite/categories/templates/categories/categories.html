@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #eaeaea; /* Серый фон */
+        }
+
+        h1 {
+            color: #4A90E2; /* Голубой цвет для основного заголовка */
+            text-align: center;
+        }
+
+        h2 {
+            color: #D54E21; /* Оранжевый цвет для заголовков постов */
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #333; /* Тёмно-серый цвет для текста */
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none; /* Убираем маркеры у списка */
+            padding: 0; /* Убираем внутренние отступы у списка */
+        }
+
+        li {
+            background: #fff; /* Белый фон для элементов списка */
+            margin: 10px 0; /* Отступы между элементами списка */
+            padding: 15px; /* Внутренние отступы элементов списка */
+            border-radius: 5px; /* Радиус закругления углов */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для элемента списка */
+        }
+
+        hr {
+            margin: 10px 0; /* Отступы для горизонтальной линии */
+            border: 0; /* Убираем стандартный стиль */
+            border-top: 2px solid #A4C639; /* Ярко-зеленая линия */
+        }
+
+        .menu {
+            text-align: center; /* Центрируем меню */
+            margin-bottom: 20px; /* Отступ снизу для меню */
+            color: #6B5B95; /* Фиолетовый цвет для меню */
+        }
+
+        .highlight {
+            background-color: #F9E79F; /* Светло-желтый фоновый цвет для выделения элементов */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <p>{{menu|join:" | "}}</p>
+    </div>
+    <h1>{{title}}</h1>
+
+    <ul>
+        {% for p in posts %}
+        <li class="highlight">
+            <h2>{{p.title}}</h2>
+            <p>{{p.content}}</p>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

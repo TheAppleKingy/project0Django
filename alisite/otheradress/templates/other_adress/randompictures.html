@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альбом Фотокарточек</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .album {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 15px;
+        }
+        .photo {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .photo-title {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Мой Альбом Фотокарточек</h1>
+<div class="album">
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=1" alt="Фотокартка 1">
+        <div class="photo-title">Фотокартка 1</div>
+    </div>
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=2" alt="Фотокартка 2">
+        <div class="photo-title">Фотокартка 2</div>
+    </div>
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=3" alt="Фотокартка 3">
+        <div class="photo-title">Фотокартка 3</div>
+    </div>
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=4" alt="Фотокартка 4">
+        <div class="photo-title">Фотокартка 4</div>
+    </div>
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=5" alt="Фотокартка 5">
+        <div class="photo-title">Фотокартка 5</div>
+    </div>
+    <div class="photo">
+        <img src="https://picsum.photos/250?random=6" alt="Фотокартка 6">
+        <div class="photo-title">Фотокартка 6</div>
+    </div>
+    <!-- Вы можете добавлять больше карточек по желанию -->
+</div>
+
+</body>
+</html>
